@@ -266,7 +266,7 @@
 
   <main>
     <section id="hero">
-      <h1>AI · Engineering<br>Learning in Public</h1>
+      <h1>AI·ML·Engineering<br>Learning</h1>
       <p class="intro">
         Hey, I'm Piyush — exploring artificial intelligence, machine learning, Python, 
         real-world engineering, and everything in between. This is where I share what I'm building and learning.
@@ -277,7 +277,7 @@
     <section id="about">
       <h2>About me</h2>
       <p>
-        I'm Piyush Sahoo from Odisha, passionate about AI, Python, Machine Learning and building practical engineering solutions.<br><br>
+        I'm Piyush Sahoo from India, passionate about AI, Python, Machine Learning, and building practical engineering solutions.<br><br>
         This space is for documenting my journey — tutorials, project breakdowns, thoughts on new papers/tools, 
         and honest experiments (successes + failures).
       </p>
@@ -339,40 +339,41 @@
   </main>
 
   <footer>
-    <p>© 2026 Piyush Sahoo • Built with curiosity</p>
-  </footer>
+  <p> Built with curiosity, Love & Care • © Piyush Sahoo. </p>
+  
+  <div class="social-links" style="margin-top: 1.5rem; display: flex; justify-content: center; gap: 1.8rem; flex-wrap: wrap;">
+    <!-- X (Twitter) -->
+    <a href="https://x.com/Piyush_Sahoo_" target="_blank" rel="noopener noreferrer" aria-label="Follow me on X" title="@Piyush_Sahoo_ on X">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-muted); transition: color 0.25s;">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+      </svg>
+    </a>
 
-  <script>
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
-    });
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/eng-piyush-sahoo" target="_blank" rel="noopener noreferrer" aria-label="Connect on LinkedIn" title="My LinkedIn Profile">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-muted); transition: color 0.25s;">
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+        <rect width="4" height="12" x="2" y="9"/>
+        <circle cx="4" cy="4" r="2"/>
+      </svg>
+    </a>
 
-    // Mobile menu toggle
-    const toggle = document.querySelector('.menu-toggle');
-    const menu = document.getElementById('nav-menu');
+    <!-- Email -->
+    <a href="mailto: piyushsahoo099@gmail.com " target="_blank" rel="noopener noreferrer" aria-label="Send me an email" title="Email me">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-muted); transition: color 0.25s;">
+        <rect width="20" height="16" x="2" y="4" rx="2"/>
+        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+      </svg>
+    </a>
+  </div>
 
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('show');
-    });
-
-    // Close mobile menu when clicking a link
-    menu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        menu.classList.remove('show');
-      });
-    });
-
-    // Navbar background change on scroll
-    window.addEventListener('scroll', () => {
-      document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50);
-    });
-  </script>
-</body>
-</html>
+  <style>
+    .social-links a:hover svg {
+      color: var(--accent) !important;
+      transform: translateY(-2px);
+    }
+    .social-links svg {
+      transition: all 0.25s ease;
+    }
+  </style>
+</footer>
