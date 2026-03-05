@@ -87,27 +87,164 @@
         </div>
     </section>
 
-    <section id="how-to">
-    <h2>How To Guides</h2>
-    <p>Step-by-step tutorials to help you learn and build faster.</p>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Fine-Tune LLMs Locally with LoRA/QLoRA (2026 Guide) | Piyushwrites</title>
     
-    <div style="display: grid; gap: 1.5rem; margin: 2rem 0;">
-        <div style="border: 1px solid #ddd; padding: 1.5rem; border-radius: 8px;">
-            <h3>How to Fine-Tune LLMs Locally (LoRA/QLoRA 2025)</h3>
-            <p>Run powerful models on your laptop without cloud costs. Includes full code & troubleshooting.</p>
-            <a href="how-to/fine-tune-llm-lora.html">Read →</a>
-        </div>
+    <!-- Basic reset + typography -->
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #1a1a1a;
+            --text-light: #4a4a4a;
+            --accent: #0066cc;          /* blue – change to your preferred accent */
+            --accent-hover: #0055aa;
+            --code-bg: #f5f5f5;
+            --border: #e0e0e0;
+        }
         
-        <div style="border: 1px solid #ddd; padding: 1.5rem; border-radius: 8px;">
-            <h3>How to Build RAG in Under 100 Lines of Python</h3>
-            <p>From documents → vector store → LLM answers. Beginner to intermediate level.</p>
-            <a href="how-to/simple-rag-python.html">Read →</a>
-        </div>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.65;
+            color: var(--text);
+            background: var(--bg);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
         
-        <!-- Duplicate the <div> block for each new guide -->
-    </div>
-</section>
+        header {
+            padding: 2.5rem 0 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        h1 {
+            font-size: 2.4rem;
+            margin: 0.4rem 0;
+            color: var(--accent);
+        }
+        
+        .meta {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin: 0.8rem 0 2rem;
+        }
+        
+        h2, h3 {
+            color: #0d47a1;           /* darker blue for hierarchy */
+            margin-top: 2.2rem;
+        }
+        
+        h2 { font-size: 1.95rem; }
+        h3 { font-size: 1.55rem; }
+        
+        p {
+            margin: 1.2rem 0;
+        }
+        
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+            color: var(--accent-hover);
+        }
+        
+        pre, code {
+            font-family: 'Consolas', 'Monaco', monospace;
+            background: var(--code-bg);
+            border-radius: 6px;
+        }
+        
+        pre {
+            padding: 1.2rem;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border: 1px solid var(--border);
+        }
+        
+        code {
+            padding: 0.2em 0.4em;
+            font-size: 0.92em;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 1rem 1.2rem;
+            margin: 1.8rem 0;
+            border-radius: 4px;
+        }
+        
+        footer {
+            margin-top: 4rem;
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--text-light);
+            border-top: 1px solid var(--border);
+            font-size: 0.92rem;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin: 2rem 0 1rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
 
+    <header>
+        <h1>How to Fine-Tune LLMs Locally with LoRA/QLoRA (2026 Guide)</h1>
+        <div class="meta">Piyush Sahoo • March 5, 2026 • ~18 min read</div>
+    </header>
+
+    <main>
+        <p>Running and fine-tuning large language models no longer requires expensive cloud GPUs. In this guide you'll learn how to fine-tune models like Llama 3.1 8B or Mistral Nemo on consumer hardware using efficient techniques (LoRA + 4-bit quantization).</p>
+
+        <h2>Prerequisites</h2>
+        <ul>
+            <li>Python 3.10+</li>
+            <li>GPU with ≥8 GB VRAM (RTX 3060 / 4060 / 4070 recommended)</li>
+            <li>At least 32 GB system RAM for comfort</li>
+        </ul>
+
+        <h2>Step 1: Set Up the Environment</h2>
+        <pre><code># Recommended: use uv (fastest) or conda
+uv venv --python 3.11
+source .venv/bin/activate
+
+uv pip install torch==2.4.0 --index-url https://download.pytorch.org/whl/cu121
+uv pip install transformers datasets peft accelerate bitsandbytes trl</code></pre>
+
+        <div class="warning">
+            <strong>Important:</strong> Use the correct torch CUDA version for your GPU. Check with <code>nvidia-smi</code>.
+        </div>
+
+        <h2>Step 2: Load 4-bit Quantized Model</h2>
+        <p>Quantization reduces memory usage dramatically while keeping most of the performance.</p>
+        <!-- Add more sections, code blocks, images, lists as needed -->
+
+        <p style="margin-top: 3rem;">
+            <a href="https://piyushwrites.github.io" class="back-link">← Back to Home</a>
+        </p>
+    </main>
+
+    <footer>
+        © 2026 Piyush Sahoo • Built with plain HTML & love for AI • 
+        <a href="https://github.com/Piyushwrites/Piyushwrites.github.io">Source on GitHub</a>
+    </footer>
+
+</body>
+</html>
+    
     <!-- Projects -->
     <section id="projects" class="py-24">
         <div class="max-w-6xl mx-auto px-6">
