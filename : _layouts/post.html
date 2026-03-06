@@ -1,0 +1,32 @@
+---
+layout: default  # or omit if you want bare
+---
+
+<article class="post">
+  <header>
+    <h1>{{ page.title }}</h1>
+    <p class="meta">
+      {{ page.date | date: "%b %-d, %Y" }} • 
+      {% for category in page.categories %}
+        {{ category }}{% unless forloop.last %}, {% endunless %}
+      {% endfor %}
+    </p>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <p style="margin-top: 3rem;">
+    <a href="/" class="btn">← Back to Home</a>
+  </p>
+</article>
+
+<style>
+  .post { max-width: 900px; margin: 0 auto; padding: 2rem; }
+  .post h1 { font-size: 2.8rem; margin-bottom: 0.5rem; }
+  .meta { color: #94a3b8; font-size: 1rem; margin-bottom: 2rem; }
+  .post-content { line-height: 1.7; }
+  .post-content code { background: #1e293b; padding: 0.2em 0.4em; border-radius: 4px; }
+  .post-content pre { background: #1e293b; padding: 1.2rem; border-radius: 8px; overflow-x: auto; }
+</style>
