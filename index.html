@@ -270,27 +270,129 @@
   </header>
 
   <main>
-    <section id="hero">
-     <!-- Hero Section -->
-<div class="hero" style="text-align: center; padding: 4rem 1rem 5rem; background: linear-gradient(to bottom, #0f0f1a, #111827); color: white;">
-  <h1 style="font-size: 3.5rem; margin: 0; letter-spacing: -0.05em;">
-    AI · ML · Engineering
-  </h1>
-  
-  <p style="font-size: 1.5rem; margin: 1rem 0 2rem; max-width: 700px; margin-left: auto; margin-right: auto; opacity: 0.95;">
-    Building real intelligent systems — and breaking them down so you can too.
-  </p>
-  
-  <p style="font-size: 1.25rem; max-width: 680px; margin: 0 auto 2.5rem; line-height: 1.6;">
-    Hey, I'm Piyush. I tinker with LLMs, RAG, fine-tuning, Python stacks, and production messes (including the ones that explode spectacularly). This space is for honest breakdowns, working code, failed experiments that taught me the most, and practical guides to help beginners and builders level up — without the fluff.
-  </p>
-  
-  <!-- Optional small CTA to guide scroll -->
-  <a href="#writings" style="display: inline-block; padding: 0.8rem 1.8rem; background: #3b82f6; color: white; text-decoration: none; border-radius: 6px; font-weight: 600;">
-    Dive into the writings →
-  </a>
-</div>
-    </section>
+    <!--Adding Hero section.-->
+    <!-- Hero Section – Enhanced -->
+    
+<section id="hero" style="
+  position: relative;
+  min-height: 100vh;                /* Full viewport height for impact */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background: linear-gradient(135deg, #0a0f1a 0%, #000000 100%);  /* Deep space-like dark gradient */
+  overflow: hidden;
+  padding: 2rem 1rem;
+">
+  <!-- Optional subtle overlay glow / particles (pure CSS) -->
+  <div style="
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 70%, rgba(59,130,246,0.08) 0%, transparent 50%);
+    pointer-events: none;
+  "></div>
+
+  <div style="position: relative; z-index: 2; max-width: 900px;">
+    <h1 style="
+      font-size: clamp(3rem, 8vw, 5.5rem);   /* Responsive big text */
+      margin: 0 0 1.5rem;
+      letter-spacing: -0.05em;
+      font-weight: 800;
+      line-height: 1.05;
+      background: linear-gradient(to right, #60a5fa, #a5b4fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    ">
+      AI · ML · Engineering
+    </h1>
+
+    <p style="
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      margin: 0 0 2rem;
+      opacity: 0.95;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    ">
+      Building real intelligent systems — and breaking them down so you can too.
+    </p>
+
+    <p style="
+      font-size: 1.3rem;
+      line-height: 1.7;
+      max-width: 720px;
+      margin: 0 auto 3rem;
+      opacity: 0.85;
+    ">
+      Hey, I'm Piyush. I tinker with LLMs, RAG, fine-tuning, Python stacks, and production messes (including the ones that explode spectacularly). This space is for honest breakdowns, working code, failed experiments that taught me the most, and practical guides — without the fluff.
+    </p>
+
+    <!-- CTA Button -->
+    <a href="#writings" style="
+      display: inline-block;
+      padding: 1rem 2.2rem;
+      background: linear-gradient(90deg, #3b82f6, #6366f1);
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+      border-radius: 50px;
+      box-shadow: 0 10px 30px rgba(59,130,246,0.3);
+      transition: all 0.3s ease;
+    " onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+      Dive into the writings →
+    </a>
+  </div>
+
+  <!-- Scroll Down Indicator (bottom center) -->
+  <div style="
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  ">
+    <a href="#writings" style="color: white; text-decoration: none; opacity: 0.7; transition: opacity 0.3s;">
+      <div class="scroll-arrow" style="
+        width: 30px;
+        height: 50px;
+        border: 3px solid white;
+        border-radius: 999px;
+        position: relative;
+        animation: pulse 2s infinite ease-in-out;
+      ">
+        <div style="
+          position: absolute;
+          top: 12px;
+          left: 50%;
+          width: 10px;
+          height: 10px;
+          background: white;
+          transform: translateX(-50%) rotate(45deg);
+          border-right: 3px solid transparent;
+          border-bottom: 3px solid white;
+          animation: bounce 1.8s infinite;
+        "></div>
+      </div>
+      <p style="margin-top: 0.8rem; font-size: 0.9rem;">Scroll to explore</p>
+    </a>
+  </div>
+
+  <!-- CSS Animations (add to <style> or your styles.css) -->
+  <style>
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0) rotate(45deg); }
+      50%      { transform: translateX(-50%) translateY(12px) rotate(45deg); }
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255,255,255,0.2); }
+      70%      { box-shadow: 0 0 0 15px rgba(255,255,255,0); }
+    }
+  </style>
+</section>
+    
+    <!--Adding About section-->
 
     <section id="about">
   <h2>About me</h2>
@@ -313,7 +415,7 @@
 </section>
 
     <section id="writings">
-      <h2>My writings</h2>
+      <h2 id="writings">My writings</h2>
       <div class="card-grid">
         <div class="card">
           <h3>Demystifying Machine Learning: What It Is and Why It Matters.</h3>
@@ -329,7 +431,7 @@
         </div>
         <!--Upcoming article announcement-->
         <div class="card">
-          <h3>Coming soon: Second Article</h3>
+          <h3>Coming soon: Third Article</h3>
           <p>Topic TBA — likely related to LLMs, RAG, fine-tuning or production ML patterns.</p>
           <a href="#" class="btn btn-outline" style="opacity:0.5; cursor:not-allowed;">Soon</a>
         </div>
